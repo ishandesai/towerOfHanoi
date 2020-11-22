@@ -1,0 +1,1 @@
+"Tower Of Hanoi Rules are simple:1 game will ask you how many disks you want to play with you will have to Choose three options L M R in which you will choose have to choose from which stack you want to move to which stack after you successfully move all disks from left stack to right stack then you solve it"

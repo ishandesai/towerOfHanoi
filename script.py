@@ -25,14 +25,11 @@ print("\n The fastest you can solve this game is in {} moves".format(num_optimal
 def get_input():
     choices=[choice.get_name()[0] for choice in stacks]
     while True:
-        for i in range(len(stacks)):
-            name=stacks[i].get_name()
-            letter=choices[i]
-            print("Enter {} for {}".format(letter,name))
-            user_input=input("")
 
-            if user_input == choices[i]:
-                return stacks[i]
+        print("Enter {} for {}".format(choices[0],stacks[0].get_name()),"Enter {} for {}".format(choices[1],stacks[1].get_name()),"Enter {} for {}".format(choices[2],stacks[2].get_name()))
+        user_input=input("")
+        if user_input.upper() in choices:
+            return stacks[choices.index(user_input.upper())]
 
 
 
@@ -46,7 +43,7 @@ def get_input():
 #Play the Game
 num_user_moves=0
 while right_stack.get_size() !=num_disks:
-   
+
     print ("\n\n\n...Current Stacks...")
     for i in stacks:
         i.print_items()
